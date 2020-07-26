@@ -15,7 +15,7 @@ public class RepositoryTest {
     @Before
     public void setUp(){
 //        ArrayList<Commit> commits = new ArrayList<Commit>();
-        repository = new Repository("GitJava", "GitHub Clone in Java", RepositoryType.PRIVATE);
+        repository = new Repository("GitJava", "GitHub Clone in Java", RepositoryType.PUBLIC);
 
         commit1 = new Commit("Initial commit", 001);
         commit2 = new Commit("Final commit", 002);
@@ -55,6 +55,6 @@ public class RepositoryTest {
     @Test
     public void canChangeRepositoryType(){
         repository.changeRepositoryType();
-        assertEquals(RepositoryType.PUBLIC, repository.getRepositoryType());
+        assertEquals(RepositoryType.PRIVATE, repository.getRepositoryType());
     }
 }
