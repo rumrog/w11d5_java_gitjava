@@ -59,4 +59,5 @@ public class AccountTest {
         account1.addRepository(repository1);
         assertEquals("GitJava", account1.getRepositoryByName("GitJava").getName());
     }
+
 }
